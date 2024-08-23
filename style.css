@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.wave{
+    font-size: 1.5em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.wave .char{
+    animation: anim 1s ease-in-out infinite;
+    transform: translateY(-0.35em);
+    animation-delay: calc(0.05s * var(--char-index));
+}
+@keyframes anim{
+    0%, 100%{
+        transform: translateY(-0.35em) rotate(0deg);
+    }
+    50%{
+        transform: translateY(0.35em) rotate(0deg);
+    }
+}
